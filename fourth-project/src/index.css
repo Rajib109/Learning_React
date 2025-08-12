@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Optional theme overrides */
+@theme {
+  /* Example: */
+  /* colors: {
+    primary: #1d4ed8;
+  } */
+}
