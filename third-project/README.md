@@ -1,12 +1,46 @@
-# React + Vite
+# Third Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web development project.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project is built with React and serves as a template for modern web applications.
+
+## Features
+
+- React functional components
+- Modern JavaScript (ES6+)
+- Responsive design
+
+## Installation
+
+```bash
+git clone https://github.com/yourusername/third-project.git
+cd third-project
+npm install
+```
+
+## Usage
+
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first.
+
+## License
+
+[MIT](LICENSE)
