@@ -1,39 +1,39 @@
-import { useCallback, useEffect, useState, useRef } from 'react'
+import { useCallback, useEffect, useState, useRef } from "react";
 
 function App() {
-  const [length, setLength] = useState(8)
-  const [number, setNumber] = useState(false)
-  const [character, setCharacter] = useState(false)
-  const [password, setPassword] = useState("")
-  const [copied, setCopied] = useState(false) // 👈 new state for "Copied!"
-  const passwordRef = useRef(null)
+  const [length, setLength] = useState(8);
+  const [number, setNumber] = useState(false);
+  const [character, setCharacter] = useState(false);
+  const [password, setPassword] = useState("");
+  const [copied, setCopied] = useState(false); // 👈 new state for "Copied!"
+  const passwordRef = useRef(null);
 
   // Password generator function
   const passwordGenerator = useCallback(() => {
-    let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-    if (number) chars += "0123456789"
-    if (character) chars += "!@#$%^&*()_+"
+    let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    if (number) chars += "0123456789";
+    if (character) chars += "!@#$%^&*()_+";
 
-    let newPassword = ""
+    let newPassword = "";
     for (let i = 0; i < length; i++) {
-      newPassword += chars.charAt(Math.floor(Math.random() * chars.length))
+      newPassword += chars.charAt(Math.floor(Math.random() * chars.length));
     }
-    setPassword(newPassword)
-  }, [length, number, character])
+    setPassword(newPassword);
+  }, [length, number, character]);
 
   // Generate password whenever settings change
   useEffect(() => {
-    passwordGenerator()
-  }, [passwordGenerator])
+    passwordGenerator();
+  }, [passwordGenerator]);
 
   // Copy to clipboard
   const copyPassword = useCallback(() => {
-    passwordRef.current.select()
-    window.navigator.clipboard.writeText(passwordRef.current.value)
-    passwordRef.current.setSelectionRange(0, password.length) // Mobile support
-    setCopied(true)  // 👈 show "Copied!"
-    setTimeout(() => setCopied(false), 1500) // 👈 hide after 1.5s
-  }, [password])
+    passwordRef.current.select();
+    window.navigator.clipboard.writeText(passwordRef.current.value);
+    passwordRef.current.setSelectionRange(0, password.length); // Mobile support
+    setCopied(true); // 👈 show "Copied!"
+    setTimeout(() => setCopied(false), 1500); // 👈 hide after 1.5s
+  }, [password]);
 
   return (
     <div className="h-screen flex flex-col items-center justify-center gap-4 p-6">
@@ -90,7 +90,7 @@ function App() {
         <label htmlFor="character">Include Special Characters</label>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
