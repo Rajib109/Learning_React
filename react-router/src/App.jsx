@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import UserProfile from "./pages/UserProfile"
 
 function App() {
   return (
@@ -30,12 +31,10 @@ function App() {
       {/* Route Definitions */}
       <main className="container mx-auto px-6 py-8">
         <Routes>
-          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             {/* This route will match /users/anything */}
             <Route path="/users/:username" element={<UserProfile />} />
-          </Routes>
         </Routes>
       </main>
     </div>
