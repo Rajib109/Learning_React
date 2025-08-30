@@ -2,7 +2,6 @@ import InputBox from "./components/inputbox";
 import useCurrencyinfo from "./hooks/usecurrencyinfo";
 import { useState } from "react";
 
-
 const BackgroundImage =
   "https://media.istockphoto.com/id/2216912014/photo/stock-market-crashes-ai-driven-trading-and-real-time-financial-analytics.jpg?s=2048x2048&w=is&k=20&c=fIvJEE0IHyn3oZNTDxqPIzLhkOcu26aFcnoa4dJjQzw=";
 
