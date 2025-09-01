@@ -1,4 +1,4 @@
-# Second Project
+# Simple Counter Project For React Intro
 
 A React-based web application.
 
