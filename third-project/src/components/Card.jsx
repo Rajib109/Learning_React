@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({username="babu"}) => {
+const Card = ({username="Alberto"}) => {
     return (
         <div class="max-w-sm rounded overflow-hidden shadow-lg">
             <img class="w-full" src="https://v1.tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains" />

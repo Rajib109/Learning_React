@@ -7,9 +7,9 @@ function App() {
 
   return (
     <>
-      <Card username="rajib" />
-      <Card username="king" />
-      <Card username="brother" />
+      <Card username="John" />
+      <Card username="Doe" />
+      <Card username="Smith" />
     </>
   )
 }
