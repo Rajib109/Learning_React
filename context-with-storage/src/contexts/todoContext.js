@@ -6,8 +6,6 @@ export const TodoContext = createContext({
   deleteTodo: (id) => {},
   toggleTodo: (id) => {},
   editTodo: (id, newText) => {},
-  isLoading: false,
-  error: null,
 });
 
 export const useTodoContext = () => {
