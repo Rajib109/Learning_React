@@ -7,7 +7,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
-    setTodos((prev) => [{ id: Date.now, ...todo }, ...prev]);
+    setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]);
   };
 
   const editTodo = (id, todo) => {
@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem("todos"));
-    if (storedTodos) {
+    if (storedTodos && Array.isArray(storedTodos) && storedTodos.length > 0) {
       setTodos(storedTodos);
     }
   }, []);

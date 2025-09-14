@@ -5,7 +5,7 @@ function TodoItem({ todo }) {
   const { toggleTodo, editTodo, deleteTodo } = useTodoContext();
 
   const [isTodoEditable, setIsTodoEditable] = useState(false);
-  const [todoMsg, setTodoMsg] = useState(todo.msg);
+  const [todoMsg, setTodoMsg] = useState(todo.text);
 
   return (
     <div
@@ -35,8 +35,11 @@ function TodoItem({ todo }) {
           if (todo.completed) return;
 
           if (isTodoEditable) {
-            editTodo();
-          } else setIsTodoEditable((prev) => !prev);
+            editTodo(todo.id, { ...todo, text: todoMsg });
+            setIsTodoEditable(false);
+          } else {
+            setIsTodoEditable(true);
+          }
         }}
         disabled={todo.completed}
       >
