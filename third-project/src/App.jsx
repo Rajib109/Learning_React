@@ -9,7 +9,6 @@ function App() {
     <>
       <Card username="John" />
       <Card username="Doe" />
-      <Card username="Smith" />
     </>
   )
 }
