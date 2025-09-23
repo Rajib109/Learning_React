@@ -1,6 +1,0 @@
-{
-    "scripts": {
-        "vitei":"npm create vite@latest",
-        "tailwind":"npm install tailwindcss @tailwindcss/vite"
-    }
-}
